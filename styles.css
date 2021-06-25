@@ -1,104 +1,148 @@
-
 body {
-    font-family: 'roboto', sans-serif;
-    margin: 0;
-    background-color: #f6f6f6;
-}
-a{
-    text-decoration: none;
-}
-.header {
-    display: flex;
-    justify-content: center;
-    font-size: 100px;
-    box-shadow: -6px 4px 6px -3px #cac8c8;
-}
-.localisation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eceaea;
-    margin-top: 4px;
-}
-.container_reserv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.button_reserv {
-    border-radius: 30px;
-    background-color:#FF79DA ;
-    padding: 1rem;
+  font-family: 'roboto', sans-serif;
+  margin: 0;
+  background-color: #f6f6f6;
 }
 
-.fonction{
-    padding: 20px;
-    background-color: white;
+a {
+  text-decoration: none;
 }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 100px;
+  -webkit-box-shadow: -6px 4px 6px -3px #cac8c8;
+          box-shadow: -6px 4px 6px -3px #cac8c8;
+}
+
+.localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eceaea;
+  margin-top: 4px;
+}
+
+.container_reserv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button_reserv {
+  border-radius: 30px;
+  background-color: #FF79DA;
+  padding: 1rem;
+}
+
+.fonction {
+  padding: 20px;
+  background-color: white;
+}
+
 .fonction_step {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    background-color: #f6f6f6;
-    margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  background-color: #f6f6f6;
+  margin-top: 20px;
 }
+
 .fonction_icon {
-    margin: 25px;
+  margin: 25px;
 }
+
 .fonction_number {
-    position: relative;
-    padding: 6px 10px 6px 10px;
-    border-radius: 13px;
-    background-color: #9356DC;
-    color: white;
-    margin: unset;
-    left: -9%;
+  position: relative;
+  padding: 6px 10px 6px 10px;
+  border-radius: 13px;
+  background-color: #9356DC;
+  color: white;
+  margin: unset;
+  left: -9%;
 }
+
 img {
-    width: 100%;
-    border-radius: 20px 20px 0px 0px;
-    height: 250px;
-    object-fit: cover;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-h1{
-    margin: 20px;
+
+h1 {
+  margin: 20px;
 }
+
 figure {
-    border-radius: 20px;
-    box-shadow: 0px 5px 6px 0px black;
-    background-color: white;
-    height: auto;
-    margin: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 5px 6px 0px black;
+          box-shadow: 0px 5px 6px 0px black;
+  background-color: white;
+  height: auto;
+  margin: 20px;
 }
+
 .cart-new-restaurant {
-    position: absolute;
-    right: 10%;
-    background-color: #99E2D0;
-    padding: 10px;
-    border-radius: 5px;
-    height: 20px;
-    margin: 10px;
+  position: absolute;
+  right: 10%;
+  background-color: #99E2D0;
+  padding: 10px;
+  border-radius: 5px;
+  height: 20px;
+  margin: 10px;
 }
-.new{
-    margin: auto;
+
+.new {
+  margin: auto;
 }
-.restaurant-bloc-info{
-    padding: 0px 10px 10px 10px;
+
+.restaurant-bloc-info {
+  padding: 0px 10px 10px 10px;
 }
 
 .logo {
-    width: 200px;
+  width: 200px;
 }
 
-footer{
-    background-color: black;
-    color: white;
+footer {
+  background-color: black;
+  color: white;
 }
 
-.titre_footer{
-    font-family: 'shrikland';
-    font-size: 40px;
-    margin: 10px;
-    color: white;
+.titre_footer {
+  font-family: 'shrikland';
+  font-size: 40px;
+  margin: 10px;
+  color: white;
 }
+
+.footer_bloc-links {
+  padding: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
