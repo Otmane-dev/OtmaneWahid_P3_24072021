@@ -6,6 +6,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .header {
@@ -48,8 +49,10 @@ a {
 }
 
 .button_reserv {
+  color: #fff;
   border-radius: 30px;
-  background-color: #FF79DA;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   padding: 1rem;
 }
 
@@ -71,6 +74,43 @@ a {
   border-radius: 30px;
   background-color: #f6f6f6;
   margin-top: 20px;
+  position: relative;
+  -webkit-animation: slideDown 3s;
+          animation: slideDown 3s;
+}
+
+.fonction_step:hover {
+  background-color: #9256dc31;
+  -webkit-transition: ease-in 0.2s;
+  transition: ease-in 0.2s;
+}
+
+.fonction_step:hover .fonction_icon {
+  color: #9356DC;
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .fonction_icon {
@@ -78,16 +118,30 @@ a {
 }
 
 .fonction_number {
-  position: relative;
+  position: absolute;
   padding: 6px 10px 6px 10px;
   border-radius: 13px;
   background-color: #9356DC;
-  color: white;
+  color: #fff;
   margin: unset;
-  left: -9%;
+  left: -2%;
 }
 
-img {
+.cart-restaurant {
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-animation: slideDown 3s;
+          animation: slideDown 3s;
+}
+
+.cart-restaurant:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.restaurant {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
   height: 250px;
@@ -124,6 +178,27 @@ figure {
 
 .restaurant-bloc-info {
   padding: 0px 10px 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurant-bloc-info h3 {
+  margin: 0px;
+}
+
+.restaurant-bloc-info p {
+  margin: 0px;
+}
+
+.restaurant-bloc-info .fal {
+  display: none;
 }
 
 .logo {
@@ -132,14 +207,14 @@ figure {
 
 footer {
   background-color: black;
-  color: white;
+  color: #fff;
 }
 
 .titre_footer {
   font-family: 'shrikland';
   font-size: 40px;
   margin: 10px;
-  color: white;
+  color: #fff;
 }
 
 .footer_bloc-links {
