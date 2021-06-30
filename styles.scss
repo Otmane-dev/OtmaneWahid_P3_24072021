@@ -165,3 +165,27 @@ footer{
         }
     }
 }
+@media screen and (min-width:800px)
+{
+    .fonction_all
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    .restaurants
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    h1{
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        text-align: center;
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
