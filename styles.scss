@@ -26,12 +26,17 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .button_reserv {
     color: $color-p;
     border-radius: 30px;
     background-image: linear-gradient(to bottom,  #FF79DA,#9356DC) ;
     padding: 1rem;
+    &:hover{
+        opacity: 80%;
+        transition: ease-in 0.2s ;
+    }
 }
 
 .fonction{
@@ -59,7 +64,7 @@ a{
 }
 @keyframes slideDown {
     from {
-        transform: translateY(200px);
+        transform: translateY(20px);
         opacity: 0;
     }
     to{
@@ -89,7 +94,7 @@ a{
 .restaurant {
     width: 100%;
     border-radius: 20px 20px 0px 0px;
-    height: 250px;
+    height: 180px;
     object-fit: cover;
 }
 h1{
@@ -115,7 +120,7 @@ figure {
     margin: auto;
 }
 .restaurant-bloc-info{
-    padding: 0px 10px 10px 10px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -137,7 +142,7 @@ figure {
 }
 
 footer{
-    background-color: black;
+    background-color: #353030;
     color: $color-p;
 }
 
@@ -149,4 +154,14 @@ footer{
 }
 .footer_bloc-links{
     padding: 10px;
+    .footer_bloc-link{
+        display: flex;
+        align-items: baseline;
+        p{
+            margin-top: 5px;
+        }
+        .fas{
+            letter-spacing: 15px;
+        }
+    }
 }

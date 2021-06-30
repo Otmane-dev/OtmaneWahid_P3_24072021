@@ -1,0 +1,89 @@
+$cd-body:#f6f6f6;
+$color-p:#fff;
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    background-color: $cd-body;
+}
+.header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+        &_arrow-back{
+            position: absolute;
+            left: 2%;
+        }
+}
+.img_menus{
+    width: 100%;
+    object-fit: cover;
+}
+.menu{
+    padding: 10px;
+    border-radius: 30px 30px 0px 0px;
+    margin-top: -64px;
+    background-color: $cd-body;
+    position: relative;
+    h1{
+        
+        font-family: 'shrikland';
+    }
+}
+.header_menu{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.bloc_grid_menu{
+    animation: slideDown 3s;
+}
+
+.case_menu{
+    border-radius: 20px;
+    background-color: $color-p;
+    box-shadow: 0px 0px 14px -7px;
+    padding: 0px 20px 0px 20px;
+    margin: 10px;
+}
+.case_plat-et-prix
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.case_plat-titre{
+    font-weight: bold;
+}
+.validation-box{
+    display: none;
+}
+.commend_button{
+    display: flex;
+    justify-content: center;
+}
+.buttons{
+    color: $color-p;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom,  #FF79DA,#9356DC) ;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    &:hover{
+        opacity: 80%;
+        transition: ease-in 0.2s ;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        -o-transform: translateY(0);
+        opacity: 1;
+    }
+}

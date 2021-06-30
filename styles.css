@@ -46,6 +46,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .button_reserv {
@@ -54,6 +55,12 @@ a {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   padding: 1rem;
+}
+
+.button_reserv:hover {
+  opacity: 80%;
+  -webkit-transition: ease-in 0.2s;
+  transition: ease-in 0.2s;
 }
 
 .fonction {
@@ -91,8 +98,8 @@ a {
 
 @-webkit-keyframes slideDown {
   from {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
     opacity: 0;
   }
   to {
@@ -103,8 +110,8 @@ a {
 
 @keyframes slideDown {
   from {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
     opacity: 0;
   }
   to {
@@ -144,7 +151,7 @@ a {
 .restaurant {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
-  height: 250px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -177,7 +184,7 @@ figure {
 }
 
 .restaurant-bloc-info {
-  padding: 0px 10px 10px 10px;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,7 +213,7 @@ figure {
 }
 
 footer {
-  background-color: black;
+  background-color: #353030;
   color: #fff;
 }
 
@@ -219,5 +226,22 @@ footer {
 
 .footer_bloc-links {
   padding: 10px;
+}
+
+.footer_bloc-links .footer_bloc-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.footer_bloc-links .footer_bloc-link p {
+  margin-top: 5px;
+}
+
+.footer_bloc-links .footer_bloc-link .fas {
+  letter-spacing: 15px;
 }
 /*# sourceMappingURL=styles.css.map */
