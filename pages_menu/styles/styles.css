@@ -65,11 +65,25 @@ body {
   margin: 10px;
 }
 
-.case_menu:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-transition: ease-in 0.2s;
-  transition: ease-in 0.2s;
+.case_menu:hover .validation-box {
+  color: #fff;
+  position: relative;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background-color: #99e2d0;
+  padding: 14px;
+  border-radius: 0px 15px 15px 0px;
+  -webkit-transform: slide-left 1s;
+          transform: slide-left 1s;
+}
+
+.case_menu:hover .fa-check-circle {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: rotate-center 1s;
+          animation: rotate-center 1s;
 }
 
 .case_plat-et-prix {
@@ -108,6 +122,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
+  white-space: nowrap;
 }
 
 #case-2 {
@@ -122,6 +137,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
+  white-space: nowrap;
 }
 
 #case-4 {
@@ -129,6 +145,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
+  white-space: nowrap;
 }
 
 #case-5 {
@@ -136,6 +153,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+  white-space: nowrap;
 }
 
 #case-6 {
@@ -143,6 +161,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
+  white-space: nowrap;
 }
 
 #case-7 {
@@ -150,6 +169,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
+  white-space: nowrap;
 }
 
 #case-8 {
@@ -157,6 +177,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
+  white-space: nowrap;
 }
 
 #case-9 {
@@ -164,6 +185,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
+  white-space: nowrap;
 }
 
 #case-10 {
@@ -171,10 +193,7 @@ body {
           animation: slideDown 1s;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
-}
-
-.validation-box {
-  display: none;
+  white-space: nowrap;
 }
 
 .commend_button {
@@ -228,6 +247,60 @@ body {
   to {
     -o-transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
