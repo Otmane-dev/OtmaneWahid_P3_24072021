@@ -1,3 +1,4 @@
+/*@import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap'); */
 body {
   font-family: 'roboto', sans-serif;
   margin: 0;
@@ -7,6 +8,77 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background-color: #f6f6f6;
+  margin: auto;
+  /*margin-top: 100px;
+    margin-bottom: 100px;*/
+  border: 10px solid black;
+  width: 120px;
+  height: 120px;
+  border-top-color: #FF79DA;
+  border-bottom-color: #9356DC;
+  border-left-color: #99E2D0;
+  border-right-color: #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: chargeur 4s linear infinite;
+          animation: chargeur 4s linear infinite;
+}
+
+@-webkit-keyframes chargeur {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(360deg) scale(1.15);
+            transform: rotate(360deg) scale(1.15);
+  }
+  75% {
+    -webkit-transform: rotate(720deg) scale(1);
+            transform: rotate(720deg) scale(1);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes chargeur {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(360deg) scale(1.15);
+            transform: rotate(360deg) scale(1.15);
+  }
+  75% {
+    -webkit-transform: rotate(720deg) scale(1);
+            transform: rotate(720deg) scale(1);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .header {
@@ -61,6 +133,8 @@ a {
   opacity: 80%;
   -webkit-transition: ease-in 0.2s;
   transition: ease-in 0.2s;
+  -webkit-box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.68);
 }
 
 .fonction {
@@ -141,11 +215,9 @@ a {
   transition: transform .5s, -webkit-transform .5s;
   -webkit-animation: slideDown 3s;
           animation: slideDown 3s;
-}
-
-.cart-restaurant:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  /*   &:hover {
+            transform: scale(1.02);
+}*/
 }
 
 .restaurant {
@@ -169,9 +241,9 @@ figure {
   margin: 20px;
 }
 
-.cart-new-restaurant {
+.cart-new-restaurant1 {
   position: absolute;
-  right: 10%;
+  right: 35px;
   background-color: #99E2D0;
   padding: 10px;
   border-radius: 5px;
@@ -179,7 +251,21 @@ figure {
   margin: 10px;
 }
 
-.new {
+.cart-new-restaurant1 .new {
+  margin: auto;
+}
+
+.cart-new-restaurant2 {
+  position: absolute;
+  right: 35px;
+  background-color: #99E2D0;
+  padding: 10px;
+  border-radius: 5px;
+  height: 20px;
+  margin: 10px;
+}
+
+.cart-new-restaurant2 .new {
   margin: auto;
 }
 
@@ -208,6 +294,45 @@ figure {
   display: none;
 }
 
+.restaurant-bloc-info .icon_coeur {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+}
+
+.restaurant-bloc-info i.far.fa-heart.vide {
+  position: absolute;
+}
+
+.restaurant-bloc-info i.fas.fa-heart.plein {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+
+.restaurant-bloc-info:hover i.fas.fa-heart.plein {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+
+.restaurant-bloc-info:hover i.far.fa-heart.vide {
+  display: none;
+}
+
 .logo {
   width: 200px;
 }
@@ -218,10 +343,11 @@ footer {
 }
 
 .titre_footer {
-  font-family: 'shrikland';
-  font-size: 40px;
+  font-family: 'shrikland','cursive';
+  font-style: italic;
+  font-weight: bold;
+  font-size: 45px;
   margin: 10px;
-  color: #fff;
 }
 
 .footer_bloc-links {

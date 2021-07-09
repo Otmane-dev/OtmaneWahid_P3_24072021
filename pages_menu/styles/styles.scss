@@ -5,6 +5,10 @@ body {
     margin: 0;
     background-color: $cd-body;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .header{
     position: relative;
     display: flex;
@@ -29,16 +33,58 @@ body {
     position: relative;
     h1{
         
-        font-family: 'shrikland';
+        font-family: 'shrikland', 'cursive';
         font-weight: bold;
         font-style: italic;
     }
+}
+i.fas::before{
+    color: linear-gradient(to bottom,  #FF79DA,#9356DC) ;
 }
 .header_menu{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    .icon_coeur{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        &:hover{
+            i.fas.fa-heart.plein{
+                background: linear-gradient( to bottom,  #FF79DA,#9356DC) ;
+                color: transparent;
+                -webkit-background-clip: text;
+                opacity: 1;
+            }
+            i.far.fa-heart.vide{
+                display: none;
+            }
+        }
+    }
 }
+i.far.fa-heart.vide {
+    position: absolute;
+}
+i.fas.fa-heart.plein{
+    background: linear-gradient( to bottom,  #FF79DA,#9356DC) ;
+    color: transparent;
+    -webkit-background-clip: text;
+    opacity: 0;
+}
+/*.validation-box{
+    color: $color-p;
+    position: relative;
+    transform: scale(1.5);
+    transform-origin: left ;
+    background-color: #99e2d0;
+    padding: 14px;
+    border-radius: 0px 15px 15px 0px;
+    transform: slide-left ease 1s;
+    transition: transform;
+} */
 
 .case_menu{
     border-radius: 20px;
@@ -46,39 +92,72 @@ body {
     box-shadow: 0px 0px 14px -7px;
     padding: 0px 20px 0px 20px;
     margin: 10px;
-    &:hover{
-        .validation-box{
-            color: $color-p;
-            position: relative;
-            transform: scale(1.5);
-            transform-origin: left ;
-            background-color: #99e2d0;
-            padding: 14px;
-            border-radius: 0px 15px 15px 0px;
-            transform: slide-left 1s;
-          }   
-          .fa-check-circle{
-            transition: 1s;
-            animation: rotate-center 1s;
-         
-        }
-    }
-}
 
+}
+.validation-box{ 
+    display: none;
+    color: $color-p;
+    position: absolute;
+    transform: scaleX(1) ease 1s;
+    transform-origin: right ;
+    background-color: #99e2d0;
+    padding: 26px;
+    border-radius: 0px 20px 20px 0px;
+    transition: transform ease-in 1s;
+    }
+h3::before{
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #99e2d0;
+    position: absolute;
+    z-index:20;
+    left: 0px;
+    /*bottom: -8px;*/
+}
 .case_plat-et-prix
 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &:hover{ 
+        .validation-box{ 
+            display: flex;
+            justify-content: right;
+            color: $color-p;
+            position: absolute;
+            transform: scaleX(1) ease 1s;
+            transform-origin: right ;
+            background-color: #99e2d0;
+            padding: 26px;
+            border-radius: 0px 20px 20px 0px;
+            transition: transform ease-in 1s;
+            }
+        .fa-check-circle{
+            transition: 1s;
+            animation: rotate-center 1s;
+        }
+    }
 }
 .case_plat-titre{
     font-weight: bold;
 }
+.case_plat{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 .plat-titre{
     margin-bottom: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .soustitre{
     margin-top: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .case_prix{
     font-weight: bold;
@@ -87,53 +166,54 @@ body {
     animation: slideDown 1s;
 }*/
 #case-1{
-    animation: slideDown 1s;
-    animation-delay: 0.1s;
-    white-space: nowrap;
+    animation: fadeIn 1s;
+    /*animation-delay: 0.1s;*/
+    /*white-space: nowrap;*/
 }
 #case-2{
-    animation: slideDown 1s;
-    animation-delay: 0.2s;
+    animation: fadeIn 2s;
+   /* animation-delay: 0.2s;*/
+    /*white-space: nowrap;*/
 }
 #case-3{
-    animation: slideDown 1s;
-    animation-delay: 0.3s;
-    white-space: nowrap;
+    animation: fadeIn 3s;
+   /* animation-delay: 0.3s;
+    /*white-space: nowrap;*/
 }
 #case-4{
-    animation: slideDown 1s;
-    animation-delay: 0.4s;
-    white-space: nowrap;
+    animation: fadeIn 4s;
+    /*animation-delay: 0.4s;
+    /*white-space: nowrap;*/
 }
 #case-5{
-    animation: slideDown 1s;
-    animation-delay: 0.5s;
-    white-space: nowrap;
+    animation: fadeIn 5s;
+   /* animation-delay: 0.5s;
+    /*white-space: nowrap;*/
 }
 #case-6{
-    animation: slideDown 1s;
-    animation-delay: 0.6s;
-    white-space: nowrap;
+    animation: fadeIn 6s;
+    /*animation-delay: 0.6s;
+    /*white-space: nowrap;*/
 }
 #case-7{
-    animation: slideDown 1s;
-    animation-delay: 0.7s;
-    white-space: nowrap;
+    animation: fadeIn 7s;
+    /*animation-delay: 0.7s;
+    /*white-space: nowrap;*/
 }
 #case-8{
-    animation: slideDown 1s;
-    animation-delay: 0.8s;
-    white-space: nowrap;
+    animation: fadeIn 8s;
+   /* animation-delay: 0.8s;
+    /*white-space: nowrap;*/
 }
 #case-9{
-    animation: slideDown 1s;
-    animation-delay: 0.9s;
-    white-space: nowrap;
+    animation: fadeIn 9s;
+    /*animation-delay: 0.9s;
+    /*white-space: nowrap;*/
 }
 #case-10{
-    animation: slideDown 1s;
-    animation-delay: 1s;
-    white-space: nowrap;
+    animation: fadeIn 10s;
+   /* animation-delay: 1s;
+    /*white-space: nowrap;*/
 }
 
 .commend_button{
@@ -151,10 +231,12 @@ body {
     &:hover{
         opacity: 80%;
         transition: ease-in 0.2s ;
+        -webkit-box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.68); 
+        box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.68);
     }
 }
 
-@keyframes slideDown {
+/*@keyframes slideDown {
     from {
         transform: translateY(10px);
         opacity: 0;
@@ -163,7 +245,23 @@ body {
         -o-transform: translateY(0);
         opacity: 1;
     }
-}
+}*/
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    } 
 /**
  * ----------------------------------------
  * animation slide-left
@@ -216,6 +314,44 @@ body {
     }
   }
 
+.logo {
+    width: 200px;
+}
+
+footer{
+    background-color: #353030;
+    color: $color-p;
+}
+
+.titre_footer{
+    font-family: 'shrikland','cursive';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 45px;
+    margin: 10px;
+    color: $color-p;
+    text-decoration: none;
+}
+
+/*.titre_footer{
+    font-family: 'shrikland';
+    font-size: 50px;
+    margin: 10px;
+    color: $color-p;
+}*/
+.footer_bloc-links{
+    padding: 10px;
+    .footer_bloc-link{
+        display: flex;
+        align-items: baseline;
+        p{
+            margin-top: 5px;
+        }
+        .fas{
+            letter-spacing: 15px;
+        }
+    }
+}
 @media screen and (min-width:800px)
 {
     .blocs_menu{
