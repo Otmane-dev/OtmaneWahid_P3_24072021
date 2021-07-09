@@ -85,6 +85,7 @@ i.fas::before {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   opacity: 1;
 }
 
@@ -101,6 +102,7 @@ i.fas.fa-heart.plein {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   opacity: 0;
 }
 
@@ -120,14 +122,13 @@ i.fas.fa-heart.plein {
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 14px -7px;
           box-shadow: 0px 0px 14px -7px;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 0px 0px 20px;
   margin: 10px;
 }
 
 .validation-box {
   display: none;
   color: #fff;
-  position: absolute;
   -webkit-transform: scaleX(1) ease 1s;
           transform: scaleX(1) ease 1s;
   -webkit-transform-origin: right;
@@ -162,6 +163,7 @@ h3::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
 }
 
 .case_plat-et-prix:hover .validation-box {
@@ -172,9 +174,8 @@ h3::before {
       -ms-flex-pack: right;
           justify-content: right;
   color: #fff;
-  position: absolute;
-  -webkit-transform: scaleX(1) ease 1s;
-          transform: scaleX(1) ease 1s;
+  /*position: absolute;*/
+  /* transform: scaleX(1) ease 1s;*/
   -webkit-transform-origin: right;
           transform-origin: right;
   background-color: #99e2d0;
@@ -184,6 +185,8 @@ h3::before {
   transition: -webkit-transform ease-in 1s;
   transition: transform ease-in 1s;
   transition: transform ease-in 1s, -webkit-transform ease-in 1s;
+  -webkit-animation: slide-left 400ms linear;
+          animation: slide-left 400ms linear;
 }
 
 .case_plat-et-prix:hover .fa-check-circle {
@@ -201,6 +204,7 @@ h3::before {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 400px;
 }
 
 .plat-titre {
@@ -219,6 +223,7 @@ h3::before {
 
 .case_prix {
   font-weight: bold;
+  padding: 10px;
 }
 
 /*.bloc_grid_menu{
@@ -370,23 +375,31 @@ h3::before {
  */
 @-webkit-keyframes slide-left {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    display: none;
+    margin-right: -50px;
   }
   100% {
-    -webkit-transform: translateX(-15px);
-    transform: translateX(-15px);
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    display: block;
+    margin-right: 0px;
   }
 }
 
 @keyframes slide-left {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    display: none;
+    margin-right: -50px;
   }
   100% {
-    -webkit-transform: translateX(-15px);
-    transform: translateX(-15px);
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    display: block;
+    margin-right: 0px;
   }
 }
 

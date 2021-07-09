@@ -10,6 +10,21 @@ a {
   color: inherit;
 }
 
+.loader {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
 .loading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,8 +48,8 @@ a {
   border-left-color: #99E2D0;
   border-right-color: #99E2D0;
   border-radius: 50%;
-  -webkit-animation: chargeur 4s linear infinite;
-          animation: chargeur 4s linear infinite;
+  -webkit-animation: chargeur 4s linear;
+          animation: chargeur 4s linear;
 }
 
 @-webkit-keyframes chargeur {
@@ -318,6 +333,7 @@ figure {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   opacity: 0;
 }
 
@@ -326,6 +342,7 @@ figure {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   opacity: 1;
 }
 

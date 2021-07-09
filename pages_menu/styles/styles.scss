@@ -57,6 +57,7 @@ i.fas::before{
                 background: linear-gradient( to bottom,  #FF79DA,#9356DC) ;
                 color: transparent;
                 -webkit-background-clip: text;
+                background-clip: text;
                 opacity: 1;
             }
             i.far.fa-heart.vide{
@@ -72,6 +73,7 @@ i.fas.fa-heart.plein{
     background: linear-gradient( to bottom,  #FF79DA,#9356DC) ;
     color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
     opacity: 0;
 }
 /*.validation-box{
@@ -90,14 +92,13 @@ i.fas.fa-heart.plein{
     border-radius: 20px;
     background-color: $color-p;
     box-shadow: 0px 0px 14px -7px;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 0px 0px 20px;
     margin: 10px;
 
 }
 .validation-box{ 
     display: none;
     color: $color-p;
-    position: absolute;
     transform: scaleX(1) ease 1s;
     transform-origin: right ;
     background-color: #99e2d0;
@@ -120,18 +121,20 @@ h3::before{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
     &:hover{ 
         .validation-box{ 
             display: flex;
             justify-content: right;
             color: $color-p;
-            position: absolute;
-            transform: scaleX(1) ease 1s;
+            /*position: absolute;*/
+           /* transform: scaleX(1) ease 1s;*/
             transform-origin: right ;
             background-color: #99e2d0;
             padding: 26px;
             border-radius: 0px 20px 20px 0px;
             transition: transform ease-in 1s;
+            animation: slide-left 400ms linear;
             }
         .fa-check-circle{
             transition: 1s;
@@ -146,6 +149,7 @@ h3::before{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    width: 400px;
 }
 .plat-titre{
     margin-bottom: 0px;
@@ -161,6 +165,7 @@ h3::before{
 }
 .case_prix{
     font-weight: bold;
+    padding: 10px;
 }
 /*.bloc_grid_menu{
     animation: slideDown 1s;
@@ -267,24 +272,33 @@ h3::before{
  * animation slide-left
  * ----------------------------------------
  */
+ 
  @-webkit-keyframes slide-left {
     0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+              display: none;
+              margin-right:-50px ;
     }
     100% {
-      -webkit-transform: translateX(-15px);
-              transform: translateX(-15px);
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+              display: block;
+              margin-right: 0px;
     }
   }
   @keyframes slide-left {
     0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+              display: none;
+              margin-right: -50px;
     }
     100% {
-      -webkit-transform: translateX(-15px);
-              transform: translateX(-15px);
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+              display: block;
+              margin-right: 0px;
     }
   }
 
