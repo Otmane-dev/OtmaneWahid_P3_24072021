@@ -12,14 +12,33 @@ a{
     color: inherit;
 }
 .loader{
-    position: absolute;
+    position: fixed;
+    background-color: #f6f6f6;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 200vh;
     width: 100%;
+    z-index: 1;
+    animation: chargeur-back 2s linear ;
+    visibility: hidden;
+    
+}
+@keyframes chargeur-back{
+    0%{
+        visibility: visible;
+        opacity: 0.9;
+    }
+    80%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 .loading{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,14 +48,15 @@ a{
     /*margin-top: 100px;
     margin-bottom: 100px;*/
     border: 10px solid black;
-    width: 120px;
-    height: 120px;
+    width: 250px;
+    height: 250px;
     border-top-color: #FF79DA;
     border-bottom-color: #9356DC;
     border-left-color: #99E2D0;
     border-right-color: #99E2D0;
     border-radius: 50%;
-    animation: chargeur 4s linear ;
+    margin-bottom: 100%;
+    animation: chargeur 2s linear;
 }
 @keyframes chargeur{
     0%{
@@ -99,7 +119,7 @@ a{
     background-color: $cd-body;
     margin-top: 20px;
     position: relative;
-    animation: slideDown 3s;
+    /*animation: slideDown 3s;*/
 
     &:hover{
         background-color: #9256dc31;
@@ -110,7 +130,7 @@ a{
         }
     }
 }
-@keyframes slideDown {
+/*@keyframes slideDown {
     from {
         transform: translateY(20px);
         opacity: 0;
@@ -119,7 +139,7 @@ a{
         -o-transform: translateY(0);
         opacity: 1;
     }
-}
+}*/
 .fonction_icon {
     margin: 25px;
 }
@@ -132,13 +152,13 @@ a{
     margin: unset;
     left: -2%;
 }
-.cart-restaurant{
+/*.cart-restaurant{
     transition: transform .5s;
     animation: slideDown 3s;
-     /*   &:hover {
+        &:hover {
             transform: scale(1.02);
-}*/
 }
+}*/
 .restaurant {
     width: 100%;
     border-radius: 20px 20px 0px 0px;
@@ -149,13 +169,14 @@ h1{
     margin: 20px;
 }
 figure {
+    position: relative;
     border-radius: 20px;
     box-shadow: 0px 5px 6px 0px black;
     background-color: white;
     height: auto;
     margin: 20px;
 }
-.cart-new-restaurant1 {
+.cart-new-restaurant {
     position: absolute;
     right: 35px;
     background-color: #99E2D0;
@@ -163,22 +184,12 @@ figure {
     border-radius: 5px;
     height: 20px;
     margin: 10px;
+    top:10px;
     .new{
         margin: auto;
     }
 }
-.cart-new-restaurant2 {
-    position: absolute;
-    right: 35px;
-    background-color: #99E2D0;
-    padding: 10px;
-    border-radius: 5px;
-    height: 20px;
-    margin: 10px;
-    .new{
-        margin: auto;
-    }
-}
+
 
 .restaurant-bloc-info{
     padding: 10px;
@@ -221,9 +232,12 @@ figure {
             -webkit-background-clip: text;
             background-clip: text;
             opacity: 1;
+            transition: ease-in 0.5s;
         }
         i.far.fa-heart.vide{
-            display: none;
+            
+            transition: ease-in 0.5s;
+            visibility: hidden;
         }
     }
     

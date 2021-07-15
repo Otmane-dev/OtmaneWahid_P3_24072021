@@ -1,3 +1,4 @@
+/*scss page menu principal*/
 /*@import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap'); */
 body {
   font-family: 'roboto', sans-serif;
@@ -11,7 +12,8 @@ a {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
+  background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,11 +23,44 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  height: 200vh;
   width: 100%;
+  z-index: 1;
+  -webkit-animation: chargeur-back 2s linear;
+          animation: chargeur-back 2s linear;
+  visibility: hidden;
+}
+
+@-webkit-keyframes chargeur-back {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes chargeur-back {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .loading {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,15 +76,16 @@ a {
   /*margin-top: 100px;
     margin-bottom: 100px;*/
   border: 10px solid black;
-  width: 120px;
-  height: 120px;
+  width: 250px;
+  height: 250px;
   border-top-color: #FF79DA;
   border-bottom-color: #9356DC;
   border-left-color: #99E2D0;
   border-right-color: #99E2D0;
   border-radius: 50%;
-  -webkit-animation: chargeur 4s linear;
-          animation: chargeur 4s linear;
+  margin-bottom: 100%;
+  -webkit-animation: chargeur 2s linear;
+          animation: chargeur 2s linear;
 }
 
 @-webkit-keyframes chargeur {
@@ -171,8 +207,7 @@ a {
   background-color: #f6f6f6;
   margin-top: 20px;
   position: relative;
-  -webkit-animation: slideDown 3s;
-          animation: slideDown 3s;
+  /*animation: slideDown 3s;*/
 }
 
 .fonction_step:hover {
@@ -185,30 +220,16 @@ a {
   color: #9356DC;
 }
 
-@-webkit-keyframes slideDown {
-  from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    -o-transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    -o-transform: translateY(0);
-    opacity: 1;
-  }
-}
-
+/*@keyframes slideDown {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        -o-transform: translateY(0);
+        opacity: 1;
+    }
+}*/
 .fonction_icon {
   margin: 25px;
 }
@@ -223,18 +244,13 @@ a {
   left: -2%;
 }
 
-.cart-restaurant {
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
-  -webkit-animation: slideDown 3s;
-          animation: slideDown 3s;
-  /*   &:hover {
+/*.cart-restaurant{
+    transition: transform .5s;
+    animation: slideDown 3s;
+        &:hover {
             transform: scale(1.02);
-}*/
 }
-
+}*/
 .restaurant {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
@@ -248,6 +264,7 @@ h1 {
 }
 
 figure {
+  position: relative;
   border-radius: 20px;
   -webkit-box-shadow: 0px 5px 6px 0px black;
           box-shadow: 0px 5px 6px 0px black;
@@ -256,7 +273,7 @@ figure {
   margin: 20px;
 }
 
-.cart-new-restaurant1 {
+.cart-new-restaurant {
   position: absolute;
   right: 35px;
   background-color: #99E2D0;
@@ -264,23 +281,10 @@ figure {
   border-radius: 5px;
   height: 20px;
   margin: 10px;
+  top: 10px;
 }
 
-.cart-new-restaurant1 .new {
-  margin: auto;
-}
-
-.cart-new-restaurant2 {
-  position: absolute;
-  right: 35px;
-  background-color: #99E2D0;
-  padding: 10px;
-  border-radius: 5px;
-  height: 20px;
-  margin: 10px;
-}
-
-.cart-new-restaurant2 .new {
+.cart-new-restaurant .new {
   margin: auto;
 }
 
@@ -344,10 +348,14 @@ figure {
   -webkit-background-clip: text;
   background-clip: text;
   opacity: 1;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
 }
 
 .restaurant-bloc-info:hover i.far.fa-heart.vide {
-  display: none;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+  visibility: hidden;
 }
 
 .logo {

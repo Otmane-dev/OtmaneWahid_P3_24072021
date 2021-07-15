@@ -1,3 +1,4 @@
+/*scss pages restaurants*/
 body {
   font-family: 'roboto', sans-serif;
   margin: 0;
@@ -87,36 +88,33 @@ i.fas::before {
   -webkit-background-clip: text;
   background-clip: text;
   opacity: 1;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
 }
 
 .header_menu .icon_coeur:hover i.far.fa-heart.vide {
-  display: none;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+  visibility: hidden;
 }
 
 i.far.fa-heart.vide {
   position: absolute;
+  width: 40px;
+  height: 40px;
 }
 
 i.fas.fa-heart.plein {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: transparent;
+  width: 40px;
+  height: 40px;
   -webkit-background-clip: text;
   background-clip: text;
   opacity: 0;
 }
 
-/*.validation-box{
-    color: $color-p;
-    position: relative;
-    transform: scale(1.5);
-    transform-origin: left ;
-    background-color: #99e2d0;
-    padding: 14px;
-    border-radius: 0px 15px 15px 0px;
-    transform: slide-left ease 1s;
-    transition: transform;
-} */
 .case_menu {
   border-radius: 20px;
   background-color: #fff;
@@ -142,6 +140,14 @@ i.fas.fa-heart.plein {
   transition: transform ease-in 1s, -webkit-transform ease-in 1s;
 }
 
+.fa-check-circle {
+  font-size: 25px;
+}
+
+h3 {
+  position: relative;
+}
+
 h3::before {
   content: '';
   width: 50px;
@@ -150,7 +156,7 @@ h3::before {
   position: absolute;
   z-index: 20;
   left: 0px;
-  /*bottom: -8px;*/
+  bottom: -8px;
 }
 
 .case_plat-et-prix {
@@ -164,6 +170,8 @@ h3::before {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+  border-radius: 20px;
+  text-overflow: ellipsis;
 }
 
 .case_plat-et-prix:hover .validation-box {
@@ -204,7 +212,7 @@ h3::before {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 400px;
+  width: 100%;
 }
 
 .plat-titre {
@@ -234,6 +242,9 @@ h3::before {
           animation: fadeIn 1s;
   /*animation-delay: 0.1s;*/
   /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-2 {
@@ -241,6 +252,9 @@ h3::before {
           animation: fadeIn 2s;
   /* animation-delay: 0.2s;*/
   /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-3 {
@@ -248,6 +262,9 @@ h3::before {
           animation: fadeIn 3s;
   /* animation-delay: 0.3s;
     /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-4 {
@@ -255,6 +272,9 @@ h3::before {
           animation: fadeIn 4s;
   /*animation-delay: 0.4s;
     /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-5 {
@@ -262,6 +282,9 @@ h3::before {
           animation: fadeIn 5s;
   /* animation-delay: 0.5s;
     /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-6 {
@@ -269,6 +292,9 @@ h3::before {
           animation: fadeIn 6s;
   /*animation-delay: 0.6s;
     /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-7 {
@@ -276,6 +302,9 @@ h3::before {
           animation: fadeIn 7s;
   /*animation-delay: 0.7s;
     /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-8 {
@@ -283,6 +312,9 @@ h3::before {
           animation: fadeIn 8s;
   /* animation-delay: 0.8s;
     /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-9 {
@@ -290,6 +322,9 @@ h3::before {
           animation: fadeIn 9s;
   /*animation-delay: 0.9s;
     /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #case-10 {
@@ -297,6 +332,9 @@ h3::before {
           animation: fadeIn 10s;
   /* animation-delay: 1s;
     /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .commend_button {
@@ -381,8 +419,8 @@ h3::before {
     margin-right: -50px;
   }
   100% {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
     display: block;
     margin-right: 0px;
   }
@@ -396,8 +434,8 @@ h3::before {
     margin-right: -50px;
   }
   100% {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
     display: block;
     margin-right: 0px;
   }
@@ -478,11 +516,11 @@ footer {
 
 @media screen and (min-width: 800px) {
   .blocs_menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
   }
   .footer {
     display: -webkit-box;
