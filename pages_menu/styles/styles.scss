@@ -37,6 +37,8 @@ a{
         font-family: 'shrikland', 'cursive';
         font-weight: bold;
         font-style: italic;
+        font-size: 40px;
+        margin-left: 16px;
     }
 }
 i.fas::before{
@@ -91,6 +93,7 @@ i.fas.fa-heart.plein{
     box-shadow: 0px 0px 14px -7px;
     padding: 0px 0px 0px 20px;
     margin: 10px;
+
 }
 .validation-box{ 
     display: none;
@@ -109,6 +112,8 @@ i.fas.fa-heart.plein{
 }
 h3{
     position: relative;
+    margin-left: 12px;
+    font-weight: 500;
 }
 h3::before{
     content: '';
@@ -133,8 +138,6 @@ h3::before{
             display: flex;
             justify-content: right;
             color: $color-p;
-            /*position: absolute;*/
-           /* transform: scaleX(1) ease 1s;*/
             transform-origin: right ;
             background-color: #99e2d0;
             padding: 26px;
@@ -173,85 +176,63 @@ h3::before{
     font-weight: bold;
     padding: 10px;
 }
-/*.bloc_grid_menu{
-    animation: slideDown 1s;
-}*/
+
 #case-1{
     animation: fadeIn 1s;
-    /*animation-delay: 0.1s;*/
-    /*white-space: nowrap;*/ 
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-2{
     animation: fadeIn 2s;
-   /* animation-delay: 0.2s;*/
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-3{
     animation: fadeIn 3s;
-   /* animation-delay: 0.3s;
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-4{
     animation: fadeIn 4s;
-    /*animation-delay: 0.4s;
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-5{
     animation: fadeIn 5s;
-   /* animation-delay: 0.5s;
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-6{
     animation: fadeIn 6s;
-    /*animation-delay: 0.6s;
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-7{
     animation: fadeIn 7s;
-    /*animation-delay: 0.7s;
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-8{
     animation: fadeIn 8s;
-   /* animation-delay: 0.8s;
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-9{
     animation: fadeIn 9s;
-    /*animation-delay: 0.9s;
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #case-10{
     animation: fadeIn 10s;
-   /* animation-delay: 1s;
-    /*white-space: nowrap;*/
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -277,16 +258,7 @@ h3::before{
     }
 }
 
-/*@keyframes slideDown {
-    from {
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    to{
-        -o-transform: translateY(0);
-        opacity: 1;
-    }
-}*/
+
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
@@ -371,24 +343,20 @@ h3::before{
 footer{
     background-color: #353030;
     color: $color-p;
+    padding: 14px;
 }
 
 .titre_footer{
     font-family: 'shrikland','cursive';
     font-style: italic;
     font-weight: bold;
-    font-size: 45px;
+    font-size: 26px;
     margin: 10px;
     color: $color-p;
     text-decoration: none;
 }
 
-/*.titre_footer{
-    font-family: 'shrikland';
-    font-size: 50px;
-    margin: 10px;
-    color: $color-p;
-}*/
+
 .footer_bloc-links{
     padding: 10px;
     .footer_bloc-link{
@@ -402,16 +370,38 @@ footer{
         }
     }
 }
-@media screen and (min-width:800px)
+@media screen and (min-width:808px)
 {
     .blocs_menu{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        overflow: hidden;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        .bloc_menu{
+            width: 390px;
+            margin: auto;
+        }
+        
     }
     .footer{
         display: flex;
         justify-content: center;
-        text-align: center;
+    }
+}
+@media screen and (min-width:1150px)
+{
+    .blocs_menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        overflow: hidden;
+        .bloc_menu{
+            width: 390px;
+            margin: auto;
+            margin-top: 0px;
+        }
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
     }
 }

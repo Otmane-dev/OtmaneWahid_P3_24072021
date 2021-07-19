@@ -1,5 +1,4 @@
 /*scss page menu principal*/
-/*@import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap'); */
 body {
   font-family: 'roboto', sans-serif;
   margin: 0;
@@ -73,8 +72,6 @@ a {
   overflow: hidden;
   background-color: #f6f6f6;
   margin: auto;
-  /*margin-top: 100px;
-    margin-bottom: 100px;*/
   border: 10px solid black;
   width: 250px;
   height: 250px;
@@ -207,7 +204,6 @@ a {
   background-color: #f6f6f6;
   margin-top: 20px;
   position: relative;
-  /*animation: slideDown 3s;*/
 }
 
 .fonction_step:hover {
@@ -220,16 +216,6 @@ a {
   color: #9356DC;
 }
 
-/*@keyframes slideDown {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to{
-        -o-transform: translateY(0);
-        opacity: 1;
-    }
-}*/
 .fonction_icon {
   margin: 25px;
 }
@@ -244,13 +230,6 @@ a {
   left: -2%;
 }
 
-/*.cart-restaurant{
-    transition: transform .5s;
-    animation: slideDown 3s;
-        &:hover {
-            transform: scale(1.02);
-}
-}*/
 .restaurant {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
@@ -365,13 +344,14 @@ figure {
 footer {
   background-color: #353030;
   color: #fff;
+  padding: 14px;
 }
 
 .titre_footer {
   font-family: 'shrikland','cursive';
   font-style: italic;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 26px;
   margin: 10px;
 }
 
@@ -424,7 +404,6 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    text-align: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -48,6 +48,8 @@ a {
   font-family: 'shrikland', 'cursive';
   font-weight: bold;
   font-style: italic;
+  font-size: 40px;
+  margin-left: 16px;
 }
 
 i.fas::before {
@@ -146,6 +148,8 @@ i.fas.fa-heart.plein {
 
 h3 {
   position: relative;
+  margin-left: 12px;
+  font-weight: 500;
 }
 
 h3::before {
@@ -182,8 +186,6 @@ h3::before {
       -ms-flex-pack: right;
           justify-content: right;
   color: #fff;
-  /*position: absolute;*/
-  /* transform: scaleX(1) ease 1s;*/
   -webkit-transform-origin: right;
           transform-origin: right;
   background-color: #99e2d0;
@@ -234,14 +236,9 @@ h3::before {
   padding: 10px;
 }
 
-/*.bloc_grid_menu{
-    animation: slideDown 1s;
-}*/
 #case-1 {
   -webkit-animation: fadeIn 1s;
           animation: fadeIn 1s;
-  /*animation-delay: 0.1s;*/
-  /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -250,8 +247,6 @@ h3::before {
 #case-2 {
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
-  /* animation-delay: 0.2s;*/
-  /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -260,8 +255,6 @@ h3::before {
 #case-3 {
   -webkit-animation: fadeIn 3s;
           animation: fadeIn 3s;
-  /* animation-delay: 0.3s;
-    /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -270,8 +263,6 @@ h3::before {
 #case-4 {
   -webkit-animation: fadeIn 4s;
           animation: fadeIn 4s;
-  /*animation-delay: 0.4s;
-    /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -280,8 +271,6 @@ h3::before {
 #case-5 {
   -webkit-animation: fadeIn 5s;
           animation: fadeIn 5s;
-  /* animation-delay: 0.5s;
-    /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -290,8 +279,6 @@ h3::before {
 #case-6 {
   -webkit-animation: fadeIn 6s;
           animation: fadeIn 6s;
-  /*animation-delay: 0.6s;
-    /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -300,8 +287,6 @@ h3::before {
 #case-7 {
   -webkit-animation: fadeIn 7s;
           animation: fadeIn 7s;
-  /*animation-delay: 0.7s;
-    /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -310,8 +295,6 @@ h3::before {
 #case-8 {
   -webkit-animation: fadeIn 8s;
           animation: fadeIn 8s;
-  /* animation-delay: 0.8s;
-    /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -320,8 +303,6 @@ h3::before {
 #case-9 {
   -webkit-animation: fadeIn 9s;
           animation: fadeIn 9s;
-  /*animation-delay: 0.9s;
-    /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -330,8 +311,6 @@ h3::before {
 #case-10 {
   -webkit-animation: fadeIn 10s;
           animation: fadeIn 10s;
-  /* animation-delay: 1s;
-    /*white-space: nowrap;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -369,16 +348,6 @@ h3::before {
   box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.68);
 }
 
-/*@keyframes slideDown {
-    from {
-        transform: translateY(10px);
-        opacity: 0;
-    }
-    to{
-        -o-transform: translateY(0);
-        opacity: 1;
-    }
-}*/
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
@@ -475,24 +444,19 @@ h3::before {
 footer {
   background-color: #353030;
   color: #fff;
+  padding: 14px;
 }
 
 .titre_footer {
   font-family: 'shrikland','cursive';
   font-style: italic;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 26px;
   margin: 10px;
   color: #fff;
   text-decoration: none;
 }
 
-/*.titre_footer{
-    font-family: 'shrikland';
-    font-size: 50px;
-    margin: 10px;
-    color: $color-p;
-}*/
 .footer_bloc-links {
   padding: 10px;
 }
@@ -514,13 +478,18 @@ footer {
   letter-spacing: 15px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 808px) {
   .blocs_menu {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    overflow: hidden;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .blocs_menu .bloc_menu {
+    width: 390px;
+    margin: auto;
   }
   .footer {
     display: -webkit-box;
@@ -529,7 +498,31 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .blocs_menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    overflow: hidden;
+  }
+  .blocs_menu .bloc_menu {
+    width: 390px;
+    margin: auto;
+    margin-top: 0px;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */
