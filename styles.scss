@@ -203,7 +203,7 @@ figure {
         background: linear-gradient(to bottom,  #FF79DA,#9356DC) ;
         color: transparent;
         -webkit-background-clip: text;
-        background-clip: text;
+            background-clip: text;
         opacity: 0;
     }
     &:hover{
@@ -276,5 +276,24 @@ footer{
     .footer{
         display: flex;
         justify-content: center;
+    }
+    .loading{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: #f6f6f6;
+        margin: 50%;
+        border: 10px solid black;
+        width: 250px;
+        height: 250px;
+        border-top-color: #FF79DA;
+        border-bottom-color: #9356DC;
+        border-left-color: #99E2D0;
+        border-right-color: #99E2D0;
+        border-radius: 50%;
+        margin-bottom: 100%;
+        animation: chargeur 2s linear;
     }
 }

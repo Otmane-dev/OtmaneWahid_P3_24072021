@@ -52,10 +52,6 @@ a {
   margin-left: 16px;
 }
 
-i.fas::before {
-  color: linear-gradient(to bottom, #FF79DA, #9356DC);
-}
-
 .header_menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,8 +125,8 @@ i.fas.fa-heart.plein {
 .validation-box {
   display: none;
   color: #fff;
-  -webkit-transform: scaleX(1) ease 1s;
-          transform: scaleX(1) ease 1s;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
   background-color: #99e2d0;

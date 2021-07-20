@@ -10,6 +10,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
 .header{
     position: relative;
     display: flex;
@@ -41,9 +42,7 @@ a{
         margin-left: 16px;
     }
 }
-i.fas::before{
-    color: linear-gradient(to bottom,  #FF79DA,#9356DC) ;
-}
+
 .header_menu{
     display: flex;
     align-items: baseline;
@@ -98,7 +97,7 @@ i.fas.fa-heart.plein{
 .validation-box{ 
     display: none;
     color: $color-p;
-    transform: scaleX(1) ease 1s;
+    transform: scaleX(1);
     transform-origin: right ;
     background-color: #99e2d0;
     padding: 26px;
