@@ -265,6 +265,7 @@ figure {
 
 .cart-new-restaurant .new {
   margin: auto;
+  color: green;
 }
 
 .restaurant-bloc-info {
@@ -312,8 +313,8 @@ figure {
 }
 
 .restaurant-bloc-info i.fas.fa-heart.plein {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to top, #FF79DA, #9356DC);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -321,8 +322,8 @@ figure {
 }
 
 .restaurant-bloc-info:hover i.fas.fa-heart.plein {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to top, #FF79DA, #9356DC);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;

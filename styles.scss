@@ -168,6 +168,7 @@ figure {
     top:10px;
     .new{
         margin: auto;
+        color: green;
     }
 }
 
@@ -200,7 +201,7 @@ figure {
         position: absolute;
     }
     i.fas.fa-heart.plein{
-        background: linear-gradient(to bottom,  #FF79DA,#9356DC) ;
+        background: linear-gradient(to top,  #FF79DA,#9356DC) ;
         color: transparent;
         -webkit-background-clip: text;
             background-clip: text;
@@ -208,7 +209,7 @@ figure {
     }
     &:hover{
         i.fas.fa-heart.plein{
-            background: linear-gradient( to bottom,  #FF79DA,#9356DC) ;
+            background: linear-gradient( to top,  #FF79DA,#9356DC) ;
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
